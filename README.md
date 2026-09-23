@@ -1,6 +1,6 @@
 Executive Summary
 
-Introduction
+
 This analysis examines Olist's e-commerce order data from September 2016 to October 2018, covering roughly 100,000 orders across customers, products, sellers, and reviews. The goal was to understand the health of the business along four dimensions — revenue growth, category performance, delivery's effect on customer satisfaction, and regional supply gaps — and to surface specific, actionable recommendations rather than just describe the data.
 
 1. Revenue Growth
@@ -19,5 +19,4 @@ Recommendation: prioritize cutting the tail of slowest deliveries (15+ days) spe
 This chart ranks the 10 states with the highest ratio of customer orders to locally based sellers, as a proxy for which regions have demand that isn't being met by nearby supply. PA's orders-per-seller ratio (975) is more than 30% higher than the next-highest state (MA, ~745), and roughly 5x higher than the states at the bottom of this top-10 list — meaning demand in PA is being served almost entirely by sellers based elsewhere.
 Recommendation: PA is the clearest candidate for local seller recruitment — the demand is proven, the local supply is the gap, and closing it would likely also improve delivery times (and therefore review scores, per finding #3) for that region specifically.
 
-Conclusion
 Taken together, these findings point to a business that has grown past its early-stage phase and is now optimizing rather than just scaling. The clearest next steps are operational, not strategic: reduce the tail of slow deliveries where satisfaction risk is concentrated, recruit sellers in underserved states like PA to close the supply gap driving those slow deliveries in the first place, and treat high-margin categories like watches_gifts differently from high-volume ones like bed_bath_table when planning inventory and logistics investment. None of these require new markets or new products — they're improvements to how the current business is being run.
