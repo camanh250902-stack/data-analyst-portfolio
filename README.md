@@ -9,14 +9,14 @@ Data Source: https://www.kaggle.com/olistbr/brazilian-ecommerce
 **Data Overview**<br>
 The analysis draws on 8 of the 9 CSV files in the Olist Brazilian E-Commerce dataset, merged into a single working table via order_id, product_id, customer_id, and seller_id:
 
-olist_orders_dataset.csv — order-level status and timestamps (purchase, approval, delivery)
-olist_order_items_dataset.csv — line-item detail: product, seller, price, freight
-olist_products_dataset.csv — product category and attributes
-olist_customers_dataset.csv — customer location (state, city)
-olist_order_reviews_dataset.csv — review scores and comments
-olist_sellers_dataset.csv — seller location (state, city)
-olist_order_payments_dataset.csv — payment type and installment info
-product_category_name_translation.csv — maps Portuguese category names to English
+**olist_orders_dataset.csv** — order-level status and timestamps (purchase, approval, delivery)<br>
+**olist_order_items_dataset.csv** — line-item detail: product, seller, price, freight<br>
+**olist_products_dataset.csv** — product category and attributes<br>
+**olist_customers_dataset.csv** — customer location (state, city)<br>
+**olist_order_reviews_dataset.csv** — review scores and comments<br>
+**olist_sellers_dataset.csv** — seller location (state, city)<br>
+**olist_order_payments_dataset.csv** — payment type and installment info<br>
+**product_category_name_translation.csv** — maps Portuguese category names to English<br>
 
 Only olist_geolocation_dataset.csv (zip-code-level lat/long) wasn't used for these 4 questions, but it's available for follow-up analysis — e.g. mapping the underserved states from finding #4 geographically. After merging, the working table covers ~100,000 orders (with the missing-value handling and cleaning steps documented in the notebook).
 
