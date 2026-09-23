@@ -3,6 +3,31 @@ Executive Summary
 
 This analysis examines Olist's e-commerce order data from September 2016 to October 2018, covering roughly 100,000 orders across customers, products, sellers, and reviews. The goal was to understand the health of the business along four dimensions — revenue growth, category performance, delivery's effect on customer satisfaction, and regional supply gaps — and to surface specific, actionable recommendations rather than just describe the data.
 
+Description of source of data:
+I chose the Brazilian-eCommerce dataset from Kaggle for the analysis. This dataset contains approximately 100,000 customer orders, along with corresponding files on product information and English translations of product categories originally in Portuguese. Seller names in this dataset were anonymized and replaced with Game of Thrones House names. Nine files from the original Kaggle dataset were chosen for further analysis: olist_geolocation_dataset, olist_customers_dataset, olist_sellers_dataset, olist_product_dataset, olist_order_items_dataset, olist_orders_dataset, olist_order_payments_dataset, olist_order_reviews_dataset and product_category_name_translation.
+
+Data Source: https://www.kaggle.com/olistbr/brazilian-ecommerce
+
+Data Overview
+The analysis draws on 8 of the 9 CSV files in the Olist Brazilian E-Commerce dataset, merged into a single working table via order_id, product_id, customer_id, and seller_id:
+
+olist_orders_dataset.csv — order-level status and timestamps (purchase, approval, delivery)
+olist_order_items_dataset.csv — line-item detail: product, seller, price, freight
+olist_products_dataset.csv — product category and attributes
+olist_customers_dataset.csv — customer location (state, city)
+olist_order_reviews_dataset.csv — review scores and comments
+olist_sellers_dataset.csv — seller location (state, city)
+olist_order_payments_dataset.csv — payment type and installment info
+product_category_name_translation.csv — maps Portuguese category names to English
+
+Only olist_geolocation_dataset.csv (zip-code-level lat/long) wasn't used for these 4 questions, but it's available for follow-up analysis — e.g. mapping the underserved states from finding #4 geographically. After merging, the working table covers ~100,000 orders (with the missing-value handling and cleaning steps documented in the notebook).
+
+Questions we hope to answer with our data:
+Is the business growing, and is that growth steady or driven by isolated spikes?
+Which product categories generate the most revenue, and does that match which categories sell the most units?
+Does delivery speed measurably affect how customers rate their experience?
+Are there regions where demand for products isn't being matched by local seller supply?
+
 1. Revenue Growth
 The first chart shows total revenue summed by month, from September 2016 through October 2018, plotted as a single trend line. Monthly revenue climbed from near-zero in late 2016 to a peak of ~R$1.05M in November 2017, then held in the R$0.8M-1.0M range through mid-2018 — evidence of a maturing, stabilizing business rather than one still in early hockey-stick growth. The sudden drop to zero in the final two months is very likely an artifact of the dataset's collection cutoff, not a real business collapse — worth stating explicitly in the README so a reader doesn't misread it as a crisis.
 Recommendation: exclude the final 1-2 months from any growth-rate calculation (e.g. month-over-month %), since including them would make a healthy business look like it fell off a cliff.
